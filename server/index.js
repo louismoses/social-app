@@ -37,7 +37,7 @@ app.post("/auth/register", upload.single("picture"), register);
 // mongoose setup
 const PORT = process.env.PORT || 6001;
 mongoose
-  .connect(process.env.MONGO_URL, {
+  .connect(process.env.LOCAL_MONGODB, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
